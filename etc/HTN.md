@@ -22,17 +22,17 @@ Providing an [age less that 35](https://labs.openclinical.net/matt/dp_htn?age=30
 
 Providing an [age more than 35](https://labs.openclinical.net/matt/dp_htn?age=60) means that the alert is shown.
 
-Providing a [recent blood pressure reading](https://labs.openclinical.net/matt/dp_htn?_data={"dp_htn":{"sbp":[{"when": "2025-12-01T10:00", "value": 119}]}}) means that the alert isnt shown.
+Providing a [recent blood pressure reading](https://labs.openclinical.net/matt/dp_htn?_data={%22dp_htn%22:{%22sbp%22:[{%22when%22:%20%222025-12-01T10:00%22,%20%22value%22:%20119}]}}) means that the alert isnt shown.
 
-Providing an [old blood pressure reading](https://labs.openclinical.net/matt/dp_htn?_data={"dp_htn":{"sbp":[{"when": "2024-12-01T10:00", "value": 119}]}}) means that the alert is shown.
+Providing an [old blood pressure reading](https://labs.openclinical.net/matt/dp_htn?_data={%22dp_htn%22:{%22sbp%22:[{%22when%22:%20%222024-12-01T10:00%22,%20%22value%22:%20119}]}}) means that the alert is shown.
 
 ##### htn_scrn_1
 
 > 	if a patients last blood pressure is close to 140/90, they should be screened more frequently
 
-Providing an [eight month old blood pressure reading with sbp=138](https://labs.openclinical.net/matt/dp_htn?_data={"dp_htn":{"sbp":[{"when": "2025-02-01T10:00", "value": 138}], "dbp":[{"when": "2025-02-01T10:00", "value": 79}]}}) means that the alert is shown because it is between 135 and 140 which prompts a six month screening.
+Providing an [eight month old blood pressure reading with sbp=138](https://labs.openclinical.net/matt/dp_htn?_data={%22dp_htn%22:{%22sbp%22:[{%22when%22:%20%222025-02-01T10:00%22,%20%22value%22:%20138}],%20%22dbp%22:[{%22when%22:%20%222025-02-01T10:00%22,%20%22value%22:%2079}]}}) means that the alert is shown because it is between 135 and 140 which prompts a six month screening.
 
-Providing an [eight month old blood pressure reading with dbp=87](https://labs.openclinical.net/matt/dp_htn?_data={"dp_htn":{"sbp":[{"when": "2025-02-01T10:00", "value": 132}], "dbp":[{"when": "2025-02-01T10:00", "value": 87}]}}) means that the alert is shown because it is between 135 and 140 which prompts a six month screening.
+Providing an [eight month old blood pressure reading with dbp=87](https://labs.openclinical.net/matt/dp_htn?_data={%22dp_htn%22:{%22sbp%22:[{%22when%22:%20%222025-02-01T10:00%22,%20%22value%22:%20132}],%20%22dbp%22:[{%22when%22:%20%222025-02-01T10:00%22,%20%22value%22:%2087}]}}) means that the alert is shown because it is between 135 and 140 which prompts a six month screening.
 
 #### diagnosis
 
@@ -40,7 +40,7 @@ Providing an [eight month old blood pressure reading with dbp=87](https://labs.o
 
 > patients with two consecutive blood pressure readings greater than 140/90 should have a diagnosis of hypertension
 
-[Two high systolic blood pressure readings without hypertension listed as a condition](https://labs.openclinical.net/matt/dp_htn?_data={"dp_htn":{"sbp":[{"when": "2025-06-01T10:00", "value": 141}, {"when": "2025-12-01T10:00", "value": 143}], "dbp":[{"when": "2025-06-01T10:00", "value": 87}, {"when": "2025-12-01T10:00", "value": 87}]}}).  Add HTN to the list of conditions to automatically remove this alert (and raise some investigation alerts).
+[Two high systolic blood pressure readings without hypertension listed as a condition](https://labs.openclinical.net/matt/dp_htn?_data={%22dp_htn%22:{%22sbp%22:[{%22when%22:%20%222025-06-01T10:00%22,%20%22value%22:%20141},%20{%22when%22:%20%222025-12-01T10:00%22,%20%22value%22:%20143}],%20%22dbp%22:[{%22when%22:%20%222025-06-01T10:00%22,%20%22value%22:%2087},%20{%22when%22:%20%222025-12-01T10:00%22,%20%22value%22:%2087}]}}).  Add HTN to the list of conditions to automatically remove this alert (and raise some investigation alerts).
 
 ##### htn_diag_1
 
